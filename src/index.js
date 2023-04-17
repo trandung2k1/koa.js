@@ -7,6 +7,7 @@ const { koaBody } = require('koa-body');
 const cors = require('@koa/cors');
 const colors = require('colors');
 const fs = require('fs');
+const connectDB = require('./configs/db');
 const isProduction = process.env.NODE_ENV === 'production';
 const accessLogStream = fs.createWriteStream(__dirname + '/logs/access.log', {
     flags: 'a',
@@ -23,6 +24,7 @@ app.use((ctx) => {
     };
 });
 
-app.listen(port, () => {
+app.listen(port, async () => {
+    await connectDB();
     console.log(colors.green(`Server listening http://localhost:${port}`));
 });
