@@ -1,0 +1,2 @@
+::1 - - [18/Apr/2023:00:54:30 +0000] "GET / HTTP/1.1" 200 40 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+::1 - - [18/Apr/2023:00:54:31 +0000] "GET /favicon.ico HTTP/1.1" 200 40 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
