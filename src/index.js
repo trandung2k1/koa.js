@@ -7,10 +7,11 @@ const { koaBody } = require('koa-body');
 const path = require('path');
 const cors = require('@koa/cors');
 const colors = require('colors');
+const { mkdirp } = require('mkdirp');
 const fs = require('fs');
 const connectDB = require('./configs/db');
 const port = process.env.PORT || 4000;
-fs.promises.mkdir('src/logs', { recursive: true }).catch(console.error);
+mkdirp.sync('src/logs');
 const accessLogStream = fs.createWriteStream(path.join(__dirname, '/logs/access.log'), {
     flags: 'a',
 });

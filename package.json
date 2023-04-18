@@ -5,8 +5,9 @@
     "license": "MIT",
     "scripts": {
         "start": "nodemon --legacy-watch src/index.js",
+        "create": "mkdir build/logs",
         "build": "webpack --mode production",
-        "dev": "webpack --mode development && nodemon build/bundle.js"
+        "dev": "mkdirp ./build/logs && webpack --mode development && nodemon build/bundle.js"
     },
     "dependencies": {
         "@koa/cors": "^4.0.0",
@@ -16,6 +17,7 @@
         "koa-body": "^6.0.1",
         "koa-helmet": "^7.0.2",
         "koa-morgan": "^1.0.1",
+        "mkdirp": "^3.0.0",
         "mongoose": "^7.0.3"
     },
     "devDependencies": {
