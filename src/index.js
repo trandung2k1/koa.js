@@ -22,7 +22,7 @@ app.use(helmet());
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use((ctx) => {
     ctx.body = {
-        message: 'Welcome to server 👋👋',
+        message: 'Welcome to server 👋👋👋',
     };
 });
 

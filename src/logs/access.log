@@ -1,0 +1,4 @@
+::ffff:172.18.0.1 - - [18/Apr/2023:12:08:04 +0000] "GET / HTTP/1.1" 200 45 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+::ffff:172.18.0.1 - - [18/Apr/2023:12:08:05 +0000] "GET /favicon.ico HTTP/1.1" 200 45 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+::ffff:172.18.0.1 - - [18/Apr/2023:12:08:14 +0000] "GET / HTTP/1.1" 200 44 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+::ffff:172.18.0.1 - - [18/Apr/2023:12:08:15 +0000] "GET /favicon.ico HTTP/1.1" 200 44 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"

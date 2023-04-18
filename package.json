@@ -5,9 +5,10 @@
     "license": "MIT",
     "scripts": {
         "start": "nodemon --legacy-watch src/index.js",
-        "create": "mkdir build/logs",
         "build": "webpack --mode production",
-        "dev": "mkdirp ./build/logs && webpack --mode development && nodemon build/bundle.js"
+        "dev": "mkdirp ./build/logs && webpack --mode development && nodemon build/bundle.js",
+        "docker:dev": "docker-compose up",
+        "docker:remove": "docker-compose down"
     },
     "dependencies": {
         "@koa/cors": "^4.0.0",
