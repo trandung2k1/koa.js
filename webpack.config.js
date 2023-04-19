@@ -25,5 +25,7 @@ module.exports = {
     },
     target: 'node',
     externals: [nodeExternals()],
-    mode: 'development',
+    node: {
+        __dirname: true,
+    },
 };
