@@ -10,6 +10,8 @@ const colors = require('colors');
 const { mkdirp } = require('mkdirp');
 const fs = require('fs');
 const connectDB = require('./configs/db');
+const book = require('./routes/book.route');
+const author = require('./routes/author.route');
 const port = process.env.PORT || 4000;
 mkdirp.sync('src/logs');
 const accessLogStream = fs.createWriteStream(path.join(__dirname, '/logs/access.log'), {
@@ -20,9 +22,13 @@ app.use(koaBody());
 app.use(cors());
 app.use(helmet());
 app.use(morgan('combined', { stream: accessLogStream }));
+app.use(book.routes()).use(book.allowedMethods());
+app.use(author.routes()).use(author.allowedMethods());
 app.use((ctx) => {
+    ctx.status = 404;
     ctx.body = {
-        message: 'Welcome to server 👋👋👋',
+        status: 404,
+        message: `Router ${ctx.originalUrl} not found`,
     };
 });
 
